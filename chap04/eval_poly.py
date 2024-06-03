@@ -7,14 +7,18 @@ import numpy.polynomial.polynomial as npppoly # Polynomialモジュール
 p_coef = np.array([2, 0, 2, 4]) # 単なるリストも可
 print('p(x) = ', p_coef)
 
-# p_7(3)の値の計算
+# p(3)の値の計算
 print('p(3) = ', npppoly.polyval(3, p_coef))
 
-# p(x)の導関数
-print('p\'(x) = ', npppoly.polyder(p_coef))
+# p(x)の導関数p'(x)とp'(3)の計算
+dp_coef = npppoly.polyder(p_coef) # 係数の計算
+print('p\'(x) = ', dp_coef)
+print('p\'(3) = ', npppoly.polyval(3, dp_coef))
 
-# p(x)の原始関数
-print('P(x) = ', npppoly.polyint(p_coef))
+# p(x)の原始関数P(x)とP(3)の計算
+ip_coef = npppoly.polyint(p_coef) # 係数の計算
+print('P(x) = ', ip_coef)
+print('P(3) = ', npppoly.polyval(3, ip_coef))
 
 # p(x) = 0の解
 sols = npppoly.polyroots(p_coef)
