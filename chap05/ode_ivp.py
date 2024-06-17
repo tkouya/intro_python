@@ -30,3 +30,8 @@ print(ret)
 
 # yを表示
 print(ret.y)
+
+# -------------------------------------
+# Copyright (c) 2024 Tomonori Kouya
+# All rights reserved.
+# -------------------------------------

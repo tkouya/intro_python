@@ -14,3 +14,8 @@ print('integral[', a, ', ', b, '] : ', ret[0])
 print('ret = ', ret)
 print('aE(ans)              = ', ret[1])
 print('rE(ans)              = ', np.abs(ret[1] / ret[0]))
+
+# -------------------------------------
+# Copyright (c) 2024 Tomonori Kouya
+# All rights reserved.
+# -------------------------------------
