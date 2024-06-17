@@ -37,3 +37,8 @@ ax.grid()
 
 # (5) グラフを表示
 plt.show()
+
+# -------------------------------------
+# Copyright (c) 2024 Tomonori Kouya
+# All rights reserved.
+# -------------------------------------

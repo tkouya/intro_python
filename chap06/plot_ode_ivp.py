@@ -16,7 +16,7 @@ y0 = [1.0]
 t_interval = [0.0, 1.0]
 print(t_interval)
 
-# 常微分方程式を解く(1)
+# 常微分方程式を解く
 ret = scint.solve_ivp(func, t_interval, y0)  # 評価点tが可変になる
 ret_fix = scint.solve_ivp(
 	func, t_interval, y0,
@@ -56,4 +56,3 @@ plt.show()
 # Copyright (c) 2024 Tomonori Kouya
 # All rights reserved.
 # -------------------------------------
-
