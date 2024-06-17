@@ -1,7 +1,6 @@
 # eig.py: 正方行列の固有値・固有ベクトル
 import numpy as np # NumPy
 import scipy.linalg as sclinalg # SciPy.linalg
-import time # 時間計測
 
 # 乱数seedの指定
 rng = np.random.default_rng(seed=20240521)
