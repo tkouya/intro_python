@@ -22,6 +22,11 @@ if d >= 0: # 実数解の場合
     print(f'x2 = {x2:25.17e}')
 else: # 複素数解の場合
     print('complex solutions: \n')
+    x1 = complex(-b / (2 * a), math.sqrt(-d) / (2 * a))
+    x2 = complex(-b / (2 * a), -math.sqrt(-d)) / (2 * a)
+    # 出力
+    print(f'x1 = {x1:25.17e}')
+    print(f'x2 = {x2:25.17e}')
 
 # -------------------------------------
 # Copyright (c) 2024 Tomonori Kouya
