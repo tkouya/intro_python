@@ -1,0 +1,13 @@
+{# index.html #}
+{% extends 'template.html' %}
+{% block main_content %}
+<form method="POST">
+    <p>入力文字列: <input type="text" name="form_input" size="30" /></p>
+    <p>
+        <input type="submit" value="入力確定" />
+        <input type="reset" value="消去" />
+    </p>
+</form>
+<!-- 入力があれば文字列を下記に挿入 -->
+<p>入力文字列： {{ mystr }}</p>
+{% endblock %}

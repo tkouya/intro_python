@@ -9,7 +9,7 @@ prime_number = [2] # 2以上を素数判定する
 for i in range(3, max_num + 1):
     flag_prime = 0 # 0のままだと素数
     for pnum in prime_number:
-        if i % pnum == 0:
+        if i % pnum == 0: # pnumはiの約数か？
             flag_prime = 1 # 素数でない
             break
     
@@ -18,4 +18,4 @@ for i in range(3, max_num + 1):
         prime_number.append(i) # iを素数に追加
 
 # 素数をリストアップ
-print('Prime number (<', max_num, '):', prime_number)
+print('Prime number (<=', max_num, '):', prime_number)

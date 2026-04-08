@@ -66,23 +66,6 @@ def product_list(list):
 
     return retval
 
-# 第3章 2次方程式の解法（関数呼び出し版）
-# mytool.py: 関数定義
-import math  # sqrt関数
-def quad_eq(a, b, c):
-    # 判別式
-    d = b ** 2 - 4 * a * c
-
-    if d >= 0: # 実数解
-        print('Real solutions:\n')
-        x1 = (-b + math.sqrt(d)) / (2 * a)
-        x2 = (-b - math.sqrt(d)) / (2 * a)
-        # 出力
-        print(f'x1 = {x1:25.17e}')
-        print(f'x2 = {x2:25.17e}')
-    else: # 複素数解
-        print('Complex solutions:\n')
-
 # 第4章
 # 相対誤差を求める: 近似値 approx, 真値 true_val
 import numpy as np # NumPy
@@ -92,16 +75,15 @@ def relerr(approx, true_val):
 
     # listかNDarrayか
     if isinstance(approx, (list, np.ndarray)):
-        if true_val.any() == 0.0: # 真値にゼロが含まれているか？
-            nonzero_abs_true_val = []
-            for val in true_val:
-                if val == 0.0:
-                    nonzero_abs_true_val.append(1.0)
-                else:
-                    nonzero_abs_true_val.append(np.abs(val))
-        else:
-            nonzero_abs_true_val = np.abs(true_val)
-        
+        nonzero_abs_true_val = []
+        for val in true_val:
+            if val == 0.0:
+                nonzero_abs_true_val.append(1.0) # 絶対誤差を返す
+            else:
+                nonzero_abs_true_val.append(np.abs(val))
+
+        print('nonzero_abs_true_val = ', nonzero_abs_true_val)
+
         # 相対誤差の計算
         relerr /= nonzero_abs_true_val
     
