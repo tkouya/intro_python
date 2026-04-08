@@ -1,0 +1,13 @@
+    {# index.html: 学生データ表示＆グラフ描画画面 #}
+    {% extends 'template.html' %}
+    {% block main_content %}
+        <h2>学生データ</h2>
+        <div name="table" style="float:left">
+            {{ list|safe }}
+        </div>
+        <div name="graph">
+            <img src="{{ graph1 }}" alt="{{ graph1_comment }}" />
+            <img src="{{ graph2 }}" alt="{{ graph2_comment }}" />
+        </div>
+    {% endblock %}
+    

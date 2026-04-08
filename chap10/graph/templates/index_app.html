@@ -1,0 +1,18 @@
+{# index.html: 数式入力フォーム＆グラフ描画画面 #}
+{% extends 'template.html' %}
+{% block main_content %}
+    <h2>関数</h2>
+        {% if formula %}
+        <div name="graph">
+            function: {{ formula }}<br />
+            x : [{{ x_min }}, {{ x_max }}]
+            <!-- y = {{ y_vals }} -->
+            <img src="{{ img_name }}" alt="{{ formula }}" />
+        </div>
+        {% endif %}
+        <form action="/draw" method="POST">
+            <p>y = <input type="text" name="formula" length="20" /></p>
+            <p>x = [<input type="text" name="x_min" length="5" />, <input type="text" name="x_max" length="5" />]</p>
+            <p><input type="submit" value="グラフ描画" /> <input type="reset" value="数式消去" /></p>
+        </form>
+{% endblock %}

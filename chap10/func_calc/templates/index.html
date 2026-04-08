@@ -1,0 +1,18 @@
+{# index.html: 関数計算 #}
+{% extends 'template.html' %}
+{% block main_content %}
+    <!-- 入力フォーム -->
+    <h2>関数入力フォーム</h2>
+    <form action="/calc" method="POST">
+    <ul>
+        <li>関数式(「x」を変数として指定): <input type="text" name="input_formula" size="30" /></li>
+        <li>xの値：<input type="text" name="input_x" size="10" /></li>
+    </ul>
+    <p><input type="submit" value="計算実行！"> <input type="reset" value="リセット"></p>
+    </form>
+    <hr />
+    <!-- 計算値出力 -->
+    <h2>計算結果</h2>
+    <p>x = {{ str_x }}</p>
+    <p>f(x) = {{ str_formula }} = {{ str_func_val }}  </p>
+{% endblock %}

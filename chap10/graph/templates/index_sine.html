@@ -1,0 +1,16 @@
+{# index.html: 数式入力フォーム＆グラフ描画画面 #}
+{% extends 'template.html' %}
+{% block main_content %}
+    <h2>関数グラフ</h2>
+        {% if x_min %} <!-- x_min入力時のみグラフを表示 -->
+        <div name="graph">
+            function: sin(x)<br />
+            x : [{{ x_min }}, {{ x_max }}]
+            <img src="{{ img_name }}" alt="sin(x)" />
+        </div>
+        {% endif %}
+        <form action="/draw" method="POST">
+            <p>x = [<input type="text" name="x_min" length="5" />, <input type="text" name="x_max" length="5" />]</p>
+            <p><input type="submit" value="グラフ描画" /> <input type="reset" value="消去" /></p>
+        </form>
+{% endblock %}
